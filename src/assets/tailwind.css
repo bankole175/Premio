@@ -1,0 +1,30 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+    .base-input {
+        @apply mt-[6px] mb-6 py-[10px] px-4 block w-full placeholder-pgPlaceholder bg-lightDark border border-grayBorder rounded focus:outline-none focus:ring-0 focus-visible:shadow-prCustom
+    }
+    .btn-primary {
+        @apply flex justify-center items-center gap-x-2 rounded border border-transparent text-white bg-primary disabled:cursor-not-allowed disabled:bg-indigo-400 hover:bg-indigo-500 focus:outline-none focus:ring-0 focus:ring-offset-2 focus:shadow-none focus:ring-offset-0
+    }
+    .btn-white {
+        @apply flex justify-center items-center gap-x-2 rounded border border-gray-300 text-gray-700 text-qrLabel bg-white shadow-custom disabled:cursor-not-allowed disabled:opacity-70 hover:opacity-70 focus:outline-none focus:ring-0 focus:ring-offset-2 focus:shadow-none focus:ring-offset-0
+    }
+    .btn-secondary {
+        @apply flex justify-center items-center gap-x-2 rounded border border-transparent text-qrLabel bg-gray-100 shadow-custom disabled:cursor-not-allowed disabled:bg-gray-300 hover:bg-gray-300 focus:outline-none focus:ring-0 focus:ring-offset-2 focus:shadow-none focus:ring-offset-0
+    }
+    .btn-outline-primary {
+        @apply flex justify-center items-center gap-x-2 rounded border border-primary text-primary cursor-pointer disabled:cursor-not-allowed hover:bg-indigo-100 focus:outline-none focus:ring-0 focus:ring-indigo-500 focus:ring-offset-2
+    }
+    .form-group {
+        @apply mb-4
+    }
+    .form-control {
+        @apply bg-white border-[1px] border-[#D0D5DD] shadow-custom h-[40px] rounded-[8px] py-2 px-3 placeholder-[#667085] focus:outline-none focus:ring-0 focus-visible:shadow-prCustom w-inherit
+    }
+    .form-label {
+        @apply text-[0.875rem] leading-[1.25rem] text-[#344054] font-medium block mb-[6px]
+    }
+}
