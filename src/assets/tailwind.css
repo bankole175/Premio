@@ -6,6 +6,11 @@
     .base-input {
         @apply mt-[6px] mb-6 py-[10px] px-4 block w-full placeholder-pgPlaceholder bg-lightDark border border-grayBorder rounded focus:outline-none focus:ring-0 focus-visible:shadow-prCustom
     }
+
+    .pop-btn {
+        @apply flex justify-center items-center gap-x-2 rounded border border-transparent disabled:cursor-not-allowed focus:outline-none focus:ring-0 focus:ring-offset-2 focus:shadow-none focus:ring-offset-0
+    }
+
     .btn-primary {
         @apply flex justify-center items-center gap-x-2 rounded border border-transparent text-white bg-primary disabled:cursor-not-allowed disabled:bg-indigo-400 hover:bg-indigo-500 focus:outline-none focus:ring-0 focus:ring-offset-2 focus:shadow-none focus:ring-offset-0
     }
@@ -19,7 +24,7 @@
         @apply flex justify-center items-center gap-x-2 rounded border border-primary text-primary cursor-pointer disabled:cursor-not-allowed hover:bg-indigo-100 focus:outline-none focus:ring-0 focus:ring-indigo-500 focus:ring-offset-2
     }
     .form-group {
-        @apply mb-4
+        @apply mb-6
     }
     .form-control {
         @apply bg-white border-[1px] border-[#D0D5DD] shadow-custom h-[40px] rounded-[8px] py-2 px-3 placeholder-[#667085] focus:outline-none focus:ring-0 focus-visible:shadow-prCustom w-inherit
