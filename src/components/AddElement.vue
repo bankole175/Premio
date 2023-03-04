@@ -39,6 +39,7 @@
 <script setup lang="ts">
 import { Menu, MenuButton, MenuItem, MenuItems } from '@headlessui/vue'
 import type { IElement } from '@/utils/types'
+import { PlusIcon } from '@heroicons/vue/24/outline'
 
 const emit = defineEmits(['setElement'])
 

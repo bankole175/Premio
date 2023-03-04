@@ -6,10 +6,8 @@
   </div>
 </template>
 
-<script>
-export default {
-  name: 'StarComponent'
-}
+<script setup lang="ts">
+import { StarIcon } from '@heroicons/vue/24/outline'
 </script>
 
 <style scoped></style>
