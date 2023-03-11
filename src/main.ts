@@ -5,6 +5,8 @@ import App from './App.vue'
 import router from './router'
 import BaseInput from '@/components/inputs/BaseInput.vue'
 import VueSelect from 'vue-select'
+// @ts-ignore
+import drag from 'v-drag'
 
 import './assets/tailwind.css'
 import './assets/main.css'
@@ -16,6 +18,7 @@ app.component('v-select', VueSelect)
 app.component('base-input', BaseInput)
 app.component('p-button', ButtonComponent)
 app.use(createPinia())
+app.use(drag, { removeTransition: false })
 app.use(router)
 
 app.mount('#app')
