@@ -165,14 +165,8 @@ const createWidgetForm = reactive<ICreateWidget>({
 })
 
 const isPreview = ref<boolean>(false)
-const setElement = (elementType: IElement) => {
-  let newElement
-  if (elementType.type !== 'label' && elementType.type !== 'title') {
-    createWidgetForm.elementList.push(elementType)
-    return
-  }
-  newElement = { label: elementType.label, type: elementType.type, value: '' }
-  createWidgetForm.elementList.push(newElement)
+const setElement = (element: IElement) => {
+  createWidgetForm.elementList.push(element)
 }
 
 const removeElement = (index: number) => {

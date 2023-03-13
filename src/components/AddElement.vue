@@ -76,7 +76,23 @@ const fieldTypes = [
 ]
 
 const sendElementToParent = (element: IElement) => {
-  emit('setElement', element)
+  const newElement = {
+    label: element.label,
+    type: element.type,
+    inputType: element.inputType,
+    value:
+      element.type === 'email'
+        ? 'Email'
+        : element.type === 'input'
+        ? 'Text input'
+        : element.type === 'button'
+        ? 'Button'
+        : element.type === 'star'
+        ? '#f56e73'
+        : 'Enter value',
+    color: '#f56e73'
+  }
+  emit('setElement', newElement)
 }
 </script>
 
