@@ -21,12 +21,20 @@
             :key="index"
           >
             <StarComponent
+              :style="{
+                top: `${element?.y}px`,
+                left: `${element?.x}px`
+              }"
               v-if="element.type === 'star'"
               v-drag
               :color="element.value"
               @v-drag-end="getPosition($event, element)"
             />
             <p
+              :style="{
+                top: `${element?.y}px`,
+                left: `${element?.x}px`
+              }"
               v-drag
               @v-drag-end="getPosition($event, element)"
               v-if="element.type === 'title'"
@@ -35,6 +43,10 @@
               {{ element.value }}
             </p>
             <base-input
+              :style="{
+                top: `${element?.y}px`,
+                left: `${element?.x}px`
+              }"
               v-drag
               @v-drag-end="getPosition($event, element)"
               v-if="element.type === 'email' || element.type === 'input'"
@@ -46,7 +58,9 @@
             <button
               :style="{
                 backgroundColor: `${element.color}`,
-                width: `${element.width}px`
+                width: `${element.width}px`,
+                top: `${element?.y}px`,
+                left: `${element?.x}px`
               }"
               v-drag
               @v-drag-end="getPosition($event, element)"
@@ -56,6 +70,10 @@
               {{ element.value }}
             </button>
             <p
+              :style="{
+                top: `${element?.y}px`,
+                left: `${element?.x}px`
+              }"
               v-drag
               @v-drag-end="getPosition($event, element)"
               v-if="element.type === 'label'"

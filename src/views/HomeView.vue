@@ -135,7 +135,7 @@
 
 <script setup lang="ts">
 import draggable from 'vuedraggable'
-import { reactive, ref } from 'vue'
+import { onMounted, reactive, ref } from 'vue'
 import { TrashIcon } from '@heroicons/vue/24/outline'
 import type { ICreateWidget, IElement } from '@/utils/types'
 import AddElement from '@/components/AddElement.vue'
@@ -176,6 +176,17 @@ const removeElement = (index: number) => {
 const save = () => {
   localStorage.setItem('createPremioDTO', JSON.stringify(createWidgetForm))
 }
+
+onMounted(() => {
+  const getItem = localStorage.getItem('createPremioDTO')
+  if (!getItem) return
+  const widgetData: ICreateWidget = JSON.parse(getItem as string)
+  createWidgetForm.name = widgetData.name
+  createWidgetForm.widgetBackground = widgetData.widgetBackground
+  createWidgetForm.width = widgetData.width
+  createWidgetForm.height = widgetData.height
+  createWidgetForm.elementList = widgetData.elementList
+})
 </script>
 
 <style></style>
